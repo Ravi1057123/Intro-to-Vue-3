@@ -19,6 +19,9 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 50">In Stock </p>
+            <p v-else-if="inventory<20 && inventory>0">All most sold out! </p>
+            <p v-else>Out Of Stock </p>
           </div>
         </div>
       </div>
