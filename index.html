@@ -31,8 +31,14 @@
               v-for="variant in variants" 
               :key="variant.id" 
               @mouseover="updateImage(variant.image)" 
-            >{{ variant.color }}</div>
-            <button class="button" @click="addToCart">Add to Cart</button>
+              class="color-circle"
+              :style="{backgroundColor:variant.color}"
+            ></div>
+            <button class="button" 
+            @click="addToCart"
+            :class="{disabledButton:!inStock}"
+            :disabled="!inStock"
+            >Add to Cart</button>
           </div>
         </div>
       </div>
@@ -42,7 +48,7 @@
     <script src="./main.js"></script>
 
     <!-- Mount App -->
-    <script>
+    <script>  
       const mountedApp = app.mount('#app')
     </script>
   </body>

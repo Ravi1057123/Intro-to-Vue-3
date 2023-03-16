@@ -22,3 +22,5 @@ const app = Vue.createApp({
         }
     }
 })
+//There are two typee of naming convetions in vue js one is camelCase and another one is kebab case 
+//IN
